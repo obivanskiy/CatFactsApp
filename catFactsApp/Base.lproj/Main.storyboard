@@ -102,7 +102,7 @@
                             <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
                             <items>
                                 <navigationItem title="Cat Facts" id="uMt-Ml-WLq">
-                                    <barButtonItem key="leftBarButtonItem" title="Logout" id="Wqh-Ru-U2n">
+                                    <barButtonItem key="rightBarButtonItem" title="Logout" id="Wqh-Ru-U2n">
                                         <connections>
                                             <action selector="logoutActionButton:" destination="OVn-Qg-mad" id="Xde-NY-oNk"/>
                                             <segue destination="BYZ-38-t0r" kind="presentation" id="vgm-hQ-pyg"/>
