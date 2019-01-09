@@ -8,7 +8,7 @@
 
 import UIKit
 import  FirebaseAuth
-import Alamofire
+
 
 class SignInViewController: UIViewController {
 
