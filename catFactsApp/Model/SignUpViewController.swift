@@ -38,6 +38,8 @@ class SignUpViewController: UIViewController {
         super.viewDidLoad()
         
         self.hideKeyboard()
+        passwordTextField.isSecureTextEntry = true
+        repeatPasswordTextField.isSecureTextEntry = true
 
     }
     func showAlert(withMessage message: String) {

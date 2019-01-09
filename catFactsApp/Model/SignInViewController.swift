@@ -24,6 +24,7 @@ class SignInViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
     self.hideKeyboard()
+    password.isSecureTextEntry = true
     }
 
     override func viewDidAppear(_ animated: Bool) {
