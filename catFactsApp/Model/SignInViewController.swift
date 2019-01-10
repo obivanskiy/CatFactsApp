@@ -7,7 +7,7 @@
 //
 
 import UIKit
-import  FirebaseAuth
+import  Firebase
 
 
 class SignInViewController: UIViewController {
@@ -15,28 +15,30 @@ class SignInViewController: UIViewController {
     @IBOutlet weak var email: UITextField!
     @IBOutlet weak var password: UITextField!
     
-    @IBAction func logInButtonPressed(_ sender: AnyObject) {
+    @IBAction func logInButtonPressed(_ sender: Any) {
         signInAction()
+
     }
     
     
     
     override func viewDidLoad() {
         super.viewDidLoad()
-    self.hideKeyboard()
-    password.isSecureTextEntry = true
+        checkUserSession()
+        self.hideKeyboard()
+        password.isSecureTextEntry = true
     }
 
     override func viewDidAppear(_ animated: Bool) {
         super .viewDidAppear(animated)
-
+        
         
     }
     func checkUserSession() {
         if Auth.auth().currentUser != nil {
-        self.performSegue(withIdentifier: "logIn", sender: nil)
+        self.performSegue(withIdentifier: "alreadyLoggedIn", sender: nil)
     }  else {
-        let alertController = UIAlertController(title: "You are not logged in", message: "Please, enter log in data", preferredStyle: .alert)
+        let alertController = UIAlertController(title: "You are not logged in", message: "Please, enter your log in data!", preferredStyle: .alert)
         let defaultAction = UIAlertAction(title: "OK", style: .cancel, handler: nil)
             
         alertController.addAction(defaultAction)
@@ -47,7 +49,7 @@ class SignInViewController: UIViewController {
     func signInAction() {
         Auth.auth().signIn(withEmail: email.text!, password: password.text!) {(user, error) in
             if error == nil {
-                self.performSegue(withIdentifier: "logIn", sender: self)
+                self.performSegue(withIdentifier: "enterTheMainView", sender: self)
             } else {
                 let alertController = UIAlertController(title: "Error", message: error?.localizedDescription, preferredStyle: .alert)
                 let defaultAction = UIAlertAction(title: "OK", style: .cancel, handler: nil)

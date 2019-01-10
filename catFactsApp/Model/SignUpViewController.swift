@@ -21,8 +21,8 @@ class SignUpViewController: UIViewController {
             self.showAlert(withMessage: "Password needs to be more than 5 digits")
             return
         }
-        let passwordConfirmation = repeatPasswordTextField.text
-        if password != passwordConfirmation {
+            let passwordConfirmation = repeatPasswordTextField.text
+            if password != passwordConfirmation {
             self.showAlert(withMessage: "Passwords doesn't match, please, try again")
         } else {
             Auth.auth().createUser(withEmail: emailTextField.text!, password: password) { (user, error) in

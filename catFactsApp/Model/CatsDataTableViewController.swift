@@ -30,9 +30,7 @@ class CatsDataTableViewController: UITableViewController {
             catch let signOutError as NSError {
                 print ("Error!")
         }
-            let storyboard = UIStoryboard(name: "Main", bundle: nil)
-            let initial = storyboard.instantiateInitialViewController()
-                UIApplication.shared.keyWindow?.rootViewController = initial
+            self.performSegue(withIdentifier: "logoutID", sender: self)
     }
     
     

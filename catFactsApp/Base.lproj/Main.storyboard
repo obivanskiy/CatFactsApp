@@ -49,7 +49,7 @@
                                 </state>
                                 <connections>
                                     <action selector="logInButtonPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Bu9-lQ-DIN"/>
-                                    <segue destination="OVn-Qg-mad" kind="presentation" identifier="logIn" id="BPS-T6-676"/>
+                                    <segue destination="OVn-Qg-mad" kind="presentation" identifier="enterTheMainView" id="bux-pQ-pDl"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Re1-rT-cnQ">
@@ -83,6 +83,8 @@
                     <connections>
                         <outlet property="email" destination="ny0-Yu-71a" id="Q1A-nb-l2G"/>
                         <outlet property="password" destination="qt6-8J-tOJ" id="BMu-QY-lmS"/>
+                        <outlet property="view" destination="8bC-Xf-vdC" id="ooQ-ok-mly"/>
+                        <segue destination="OVn-Qg-mad" kind="presentation" identifier="alreadyLoggedIn" id="9gS-8K-YXs"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
@@ -105,7 +107,7 @@
                                     <barButtonItem key="rightBarButtonItem" title="Logout" id="Wqh-Ru-U2n">
                                         <connections>
                                             <action selector="logoutActionButton:" destination="OVn-Qg-mad" id="Xde-NY-oNk"/>
-                                            <segue destination="BYZ-38-t0r" kind="presentation" id="vgm-hQ-pyg"/>
+                                            <segue destination="BYZ-38-t0r" kind="presentation" identifier="logoutID" id="vgm-hQ-pyg"/>
                                         </connections>
                                     </barButtonItem>
                                 </navigationItem>
@@ -188,7 +190,7 @@
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Wcv-gJ-Dqa" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1240.8" y="411.57635467980299"/>
+            <point key="canvasLocation" x="2004" y="195"/>
         </scene>
         <!--Sign Up View Controller-->
         <scene sceneID="JRL-12-fnG">
@@ -260,6 +262,7 @@
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
+        <segue reference="bux-pQ-pDl"/>
         <segue reference="vgm-hQ-pyg"/>
     </inferredMetricsTieBreakers>
 </document>
