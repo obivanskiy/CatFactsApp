@@ -8,7 +8,5 @@ target 'catFactsApp' do
   # Pods for catFactsApp
 	pod 'Firebase/Core'
 	pod 'Firebase/Auth'
-	pod 'Alamofire', '~> 5.0.0.beta.1'
-	pod 'SwiftyJSON', '~> 4.0'
-	pod 'Kingfisher', '~> 5.0'
+
 end
