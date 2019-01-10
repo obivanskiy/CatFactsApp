@@ -78,9 +78,6 @@
 			isa = PBXGroup;
 			children = (
 				150B512D21DFF5FD000E13C7 /* AppDelegate.swift */,
-				150B512F21DFF5FD000E13C7 /* SignInViewController.swift */,
-				15D6E2EC21E00F09002AE261 /* SignUpViewController.swift */,
-				1520250521E0A5710042BDA7 /* CatsDataTableViewController.swift */,
 				151FDBAB21E505CD00A55A7C /* Model */,
 				150B513121DFF5FD000E13C7 /* Main.storyboard */,
 				150B513421DFF5FF000E13C7 /* Assets.xcassets */,
@@ -94,6 +91,9 @@
 		151FDBAB21E505CD00A55A7C /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				150B512F21DFF5FD000E13C7 /* SignInViewController.swift */,
+				15D6E2EC21E00F09002AE261 /* SignUpViewController.swift */,
+				1520250521E0A5710042BDA7 /* CatsDataTableViewController.swift */,
 				15187B7621E2040D00D45E2E /* CatFacts.swift */,
 			);
 			path = Model;
