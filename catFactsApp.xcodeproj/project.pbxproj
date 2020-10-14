@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 51;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -14,9 +14,10 @@
 		150B513821DFF5FF000E13C7 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 150B513621DFF5FF000E13C7 /* LaunchScreen.storyboard */; };
 		15187B7721E2040D00D45E2E /* CatFacts.swift in Sources */ = {isa = PBXBuildFile; fileRef = 15187B7621E2040D00D45E2E /* CatFacts.swift */; };
 		1520250621E0A5710042BDA7 /* CatsDataTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1520250521E0A5710042BDA7 /* CatsDataTableViewController.swift */; };
-		15D6E2EB21E00D32002AE261 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 15D6E2EA21E00D32002AE261 /* GoogleService-Info.plist */; };
 		15D6E2ED21E00F09002AE261 /* SignUpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 15D6E2EC21E00F09002AE261 /* SignUpViewController.swift */; };
 		176062366AE61DF8F329BE0D /* Pods_catFactsApp.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5BEDADCA60E0DB6FAACEC0CC /* Pods_catFactsApp.framework */; };
+		2513ACC2253758AA00ED48D1 /* NetworkingManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2513ACC1253758AA00ED48D1 /* NetworkingManager.swift */; };
+		256390FF2537592B00102B60 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 256390FE2537592B00102B60 /* GoogleService-Info.plist */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -29,8 +30,9 @@
 		150B513921DFF5FF000E13C7 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		15187B7621E2040D00D45E2E /* CatFacts.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CatFacts.swift; sourceTree = "<group>"; };
 		1520250521E0A5710042BDA7 /* CatsDataTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CatsDataTableViewController.swift; sourceTree = "<group>"; };
-		15D6E2EA21E00D32002AE261 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = SOURCE_ROOT; };
 		15D6E2EC21E00F09002AE261 /* SignUpViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpViewController.swift; sourceTree = "<group>"; };
+		2513ACC1253758AA00ED48D1 /* NetworkingManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkingManager.swift; sourceTree = "<group>"; };
+		256390FE2537592B00102B60 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		5BEDADCA60E0DB6FAACEC0CC /* Pods_catFactsApp.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_catFactsApp.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		7C05F43C7846EB669A607E3B /* Pods-catFactsApp.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-catFactsApp.debug.xcconfig"; path = "Pods/Target Support Files/Pods-catFactsApp/Pods-catFactsApp.debug.xcconfig"; sourceTree = "<group>"; };
 		DCEDAB5BBD3F994FFE7A9A5D /* Pods-catFactsApp.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-catFactsApp.release.xcconfig"; path = "Pods/Target Support Files/Pods-catFactsApp/Pods-catFactsApp.release.xcconfig"; sourceTree = "<group>"; };
@@ -77,13 +79,13 @@
 		150B512C21DFF5FD000E13C7 /* catFactsApp */ = {
 			isa = PBXGroup;
 			children = (
-				150B512D21DFF5FD000E13C7 /* AppDelegate.swift */,
+				25639102253759BE00102B60 /* Helpers */,
+				2513ACC7253758BF00ED48D1 /* Resources */,
+				2513ACC4253758B000ED48D1 /* Networking */,
+				2513ACBE2537586600ED48D1 /* ViewController */,
 				151FDBAB21E505CD00A55A7C /* Model */,
 				150B513121DFF5FD000E13C7 /* Main.storyboard */,
-				150B513421DFF5FF000E13C7 /* Assets.xcassets */,
 				150B513621DFF5FF000E13C7 /* LaunchScreen.storyboard */,
-				150B513921DFF5FF000E13C7 /* Info.plist */,
-				15D6E2EA21E00D32002AE261 /* GoogleService-Info.plist */,
 			);
 			path = catFactsApp;
 			sourceTree = "<group>";
@@ -91,12 +93,45 @@
 		151FDBAB21E505CD00A55A7C /* Model */ = {
 			isa = PBXGroup;
 			children = (
-				150B512F21DFF5FD000E13C7 /* SignInViewController.swift */,
-				15D6E2EC21E00F09002AE261 /* SignUpViewController.swift */,
-				1520250521E0A5710042BDA7 /* CatsDataTableViewController.swift */,
 				15187B7621E2040D00D45E2E /* CatFacts.swift */,
 			);
 			path = Model;
+			sourceTree = "<group>";
+		};
+		2513ACBE2537586600ED48D1 /* ViewController */ = {
+			isa = PBXGroup;
+			children = (
+				150B512F21DFF5FD000E13C7 /* SignInViewController.swift */,
+				15D6E2EC21E00F09002AE261 /* SignUpViewController.swift */,
+				1520250521E0A5710042BDA7 /* CatsDataTableViewController.swift */,
+			);
+			path = ViewController;
+			sourceTree = "<group>";
+		};
+		2513ACC4253758B000ED48D1 /* Networking */ = {
+			isa = PBXGroup;
+			children = (
+				2513ACC1253758AA00ED48D1 /* NetworkingManager.swift */,
+			);
+			path = Networking;
+			sourceTree = "<group>";
+		};
+		2513ACC7253758BF00ED48D1 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				256390FE2537592B00102B60 /* GoogleService-Info.plist */,
+				150B512D21DFF5FD000E13C7 /* AppDelegate.swift */,
+				150B513421DFF5FF000E13C7 /* Assets.xcassets */,
+				150B513921DFF5FF000E13C7 /* Info.plist */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
+		25639102253759BE00102B60 /* Helpers */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Helpers;
 			sourceTree = "<group>";
 		};
 		5B9113BE8C0DCB551F39D98E /* Pods */ = {
@@ -169,7 +204,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				150B513821DFF5FF000E13C7 /* LaunchScreen.storyboard in Resources */,
-				15D6E2EB21E00D32002AE261 /* GoogleService-Info.plist in Resources */,
+				256390FF2537592B00102B60 /* GoogleService-Info.plist in Resources */,
 				150B513521DFF5FF000E13C7 /* Assets.xcassets in Resources */,
 				150B513321DFF5FD000E13C7 /* Main.storyboard in Resources */,
 			);
@@ -206,30 +241,15 @@
 			files = (
 			);
 			inputFileListPaths = (
-			);
-			inputPaths = (
-				"${SRCROOT}/Pods/Target Support Files/Pods-catFactsApp/Pods-catFactsApp-frameworks.sh",
-				"${BUILT_PRODUCTS_DIR}/Alamofire/Alamofire.framework",
-				"${BUILT_PRODUCTS_DIR}/GTMSessionFetcher/GTMSessionFetcher.framework",
-				"${BUILT_PRODUCTS_DIR}/GoogleUtilities/GoogleUtilities.framework",
-				"${BUILT_PRODUCTS_DIR}/Kingfisher/Kingfisher.framework",
-				"${BUILT_PRODUCTS_DIR}/SwiftyJSON/SwiftyJSON.framework",
-				"${BUILT_PRODUCTS_DIR}/nanopb/nanopb.framework",
+				"${PODS_ROOT}/Target Support Files/Pods-catFactsApp/Pods-catFactsApp-frameworks-${CONFIGURATION}-input-files.xcfilelist",
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputFileListPaths = (
-			);
-			outputPaths = (
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Alamofire.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GTMSessionFetcher.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GoogleUtilities.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Kingfisher.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SwiftyJSON.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/nanopb.framework",
+				"${PODS_ROOT}/Target Support Files/Pods-catFactsApp/Pods-catFactsApp-frameworks-${CONFIGURATION}-output-files.xcfilelist",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-catFactsApp/Pods-catFactsApp-frameworks.sh\"\n";
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-catFactsApp/Pods-catFactsApp-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 /* End PBXShellScriptBuildPhase section */
@@ -242,6 +262,7 @@
 				15D6E2ED21E00F09002AE261 /* SignUpViewController.swift in Sources */,
 				150B513021DFF5FD000E13C7 /* SignInViewController.swift in Sources */,
 				15187B7721E2040D00D45E2E /* CatFacts.swift in Sources */,
+				2513ACC2253758AA00ED48D1 /* NetworkingManager.swift in Sources */,
 				150B512E21DFF5FD000E13C7 /* AppDelegate.swift in Sources */,
 				1520250621E0A5710042BDA7 /* CatsDataTableViewController.swift in Sources */,
 			);
@@ -392,7 +413,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 6FWZ3698Y8;
-				INFOPLIST_FILE = catFactsApp/Info.plist;
+				INFOPLIST_FILE = catFactsApp/Resources/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -411,7 +432,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 6FWZ3698Y8;
-				INFOPLIST_FILE = catFactsApp/Info.plist;
+				INFOPLIST_FILE = catFactsApp/Resources/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
